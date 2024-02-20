@@ -28,5 +28,5 @@ for i in range(0, len_int):
     result.append(str_int[i] + "*" + dividers[i])
     
 
-print("+".join(result))
+print(str_int+" = "+"+".join(result))
 

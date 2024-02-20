@@ -1,4 +1,6 @@
 
+initial_words = ["школа", "книга", "голуб", "зошит", "аркуш"]
+expected_results = ["шшккооллаа", "нкгиа", "гбоблбуббб", "10791086109610801090", "бслфщ"]
 words = ["школа", "книга", "голуб", "зошит", "аркуш"]
 #words = ["Тимофій", "Василь", "Ангеліна", "Костянтин", "Квазимодо"]
 word_1 = words[0] # кожна буква подвоєна
@@ -54,9 +56,20 @@ r5 = "".join(w5_new_letters)
     
 results = [r1, r2, r3, r4, r5]
 
+def check_initial_results(initial_words, current_words, expected_results, current_result, index): 
+    if initial_words != current_words: 
+        #print("You used other set of words")
+        return ""
+    else: 
+        if current_result == expected_results[index]: 
+            return ", status: OK"
+        else: 
+            return ", status: FAIL"
+
 result = []
 i = 0
 for word in words: 
     result.append( [words[i], results[i]] )
-    print(f"{words[i]} -> {results[i]}")
+    
+    print(f"{words[i]} -> {results[i]}{check_initial_results(initial_words, words, expected_results, results[i], i)}")
     i += 1

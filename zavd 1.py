@@ -7,7 +7,7 @@
 
 input = ["рекомендація", "університет", "чиновник", "спортсмен"]
 
-# get indexes
+# hint -> get indexes
 for word in input: 
     for index, letter in enumerate(word): 
         print(f"{letter} -> {index}")
@@ -22,10 +22,6 @@ r4 = input[3][6:8]+input[3][-5:-8:-1]
 output = [r1, r2, r3, r4]
 
 
-i = 0
-for word in input: 
-    result.append( [input[i], output[i]] )
-    print(f"{input[i]} -> {output[i]}")
-    i += 1
 
-
+for word in range(0, len(input)): 
+    print(f"{input[word]} -> {output[word]}")

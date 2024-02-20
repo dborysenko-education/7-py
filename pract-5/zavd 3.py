@@ -1,12 +1,16 @@
 integer = int(input("input an integer: "))
 
-def exclude_starting_zeroes(digit): 
-    digit = str(digit)
-    while "0" in digit[0]:
-        digit = digit[1:]
-    return int(digit)
+# def exclude_starting_zeroes(digit): 
+#     digit = str(digit)
+#     while "0" in digit[0]:
+#         digit = digit[1:]
+#     return int(digit)
 
-integer = exclude_starting_zeroes(integer)   
+# integer = exclude_starting_zeroes(integer)   
+
+integer = str(integer)
+while "0" in integer[0]:
+    integer = integer[1:]
 
 
 str_int = str(integer)

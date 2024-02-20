@@ -1,4 +1,4 @@
-integer = int(input("input an integer:"))
+integer = int(input("input an integer: "))
 
 def exclude_starting_zeroes(digit): 
     digit = str(digit)
@@ -28,10 +28,5 @@ for i in range(0, len_int):
     result.append(str_int[i] + "*" + dividers[i])
     
 
-print("+".join(result))
+print(str_int+" = "+"+".join(result))
 
-
-
-
-
-#print(integer)

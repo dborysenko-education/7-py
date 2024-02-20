@@ -16,10 +16,8 @@ r4 = ""
 r5 = ""
 
 #1 
-c = 0
 for letter in word_1:
-    r1 += word_1[c]*2
-    c += 1
+    r1 += letter*2
 #print("1 : ", r1)
 
 #2 
@@ -32,19 +30,14 @@ r2 = "".join(w2_pairs)
 
 
 #3
-c=0
-last_letter = len(word_3)-1
-#print(last_letter)
-#print(word_3[last_letter])
+last_letter_index = len(word_3)-1
 for letter in word_3:
-    r3 += word_3[c]+word_3[last_letter]
-    c += 1
+    r3 += letter+word_3[last_letter_index]
 #print("3 : ", r3)
 
 #4 
 for letter in word_4:
     r4 += str(ord(letter))
-    
 #print("4 : ", r4)
 
 #5 

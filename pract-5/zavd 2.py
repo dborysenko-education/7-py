@@ -47,10 +47,8 @@ w5_letter_codes = []
 for letter in word_5:
     w5_letter_codes.append(ord(letter)+1)
 
-w5_new_letters = []
 for letter_code in w5_letter_codes: 
-    w5_new_letters.append(chr(letter_code))
-r5 = "".join(w5_new_letters)
+    r5 += chr(letter_code)
 
 #print("5 : ", r5)
     

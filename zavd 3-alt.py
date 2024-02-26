@@ -1,12 +1,10 @@
-integer = int(input("input an integer: "))
-
+integer = input("input an integer: ")
 # спочатку потрібно прибрати всі 0 на початку числа: 
-integer = str(integer)
+
 while "0" in integer[0]:
     integer = integer[1:]
 
-str_int = str(integer) # приведення до рядка числа без 0 на початку
-len_int = len(str_int) # кількістсь символів до рядка
+len_int = len(integer) # кількістсь символів до рядка
 
 # визначаємо кількість дільників та кожен окремий дільник
 dividers = [] 
@@ -17,6 +15,7 @@ dividers = dividers[::-1] # змінюємо порядок дільникв
 
 result = []
 for i in range(0, len_int): 
-    result.append(str_int[i] + "*" + dividers[i])
+    result.append(integer[i] + "*" + dividers[i])
+beautiful_result = '+'.join(result)
 
-print(str_int + " = " + "+".join(result))
+print(f"{integer} = {beautiful_result}")

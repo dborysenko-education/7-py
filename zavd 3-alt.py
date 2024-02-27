@@ -4,7 +4,7 @@ integer = input("input an integer: ")
 while "0" in integer[0]:
     integer = integer[1:]
 
-len_int = len(integer) # кількістсь символів до рядка
+len_int = len(integer) # кількістсь символів у числі
 
 # визначаємо кількість дільників та кожен окремий дільник
 dividers = [] 

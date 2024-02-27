@@ -1,14 +1,15 @@
 integer = input("input an integer: ")
-# визначаємо позитивне чи негативне число ввів користувач
-negative = False
-if integer[0] == "-":
-    integer = integer[1:]
-    negative = True
 
 # відфільтровуємо все, що не є виключно цілочисленними значеннями
 if integer.isdigit() == False:
     print("Only numbers are accepted!")
     exit()
+
+# визначаємо позитивне чи негативне число ввів користувач
+negative = False
+if integer[0] == "-":
+    integer = integer[1:]
+    negative = True
 
 # прибраємо всі 0 на початку числа: 
 while "0" in integer[0]:

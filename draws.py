@@ -8,11 +8,12 @@ screen.bgcolor("black")
 def draw_squares(number):
     starting_angle = 0 
     t = turtle.Turtle()
+    t.width(5)
     colors = ["blue", "red", "yellow", "green", "gray", "brown", "purple"]
     prev_color = 0
     def randcolor(colors, prev_color): 
         curent_color = randint(0,len(colors)-1)
-        if prev_color != curent_color: 
+        if curent_color != prev_color: 
             prev_color = curent_color
         else: 
             curent_color = randint(0,len(colors)-1)
@@ -23,7 +24,7 @@ def draw_squares(number):
         t.setheading(starting_angle)
         t.color(randcolor(colors, prev_color))
         for angle in range(4):
-            t.forward(50)  # Move the turtle forward by 100 units
+            t.forward(100)  # Move the turtle forward by 100 units
             t.right(90)     # Turn the turtle right by 90 degrees
                 
         starting_angle += 360 / number
